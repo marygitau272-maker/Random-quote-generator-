@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 For My Brother Kalpa 🌟</title>
+    <style>
+        /* Light blue background, yellow text */
+        body {
+            background-color: #add8e6;  /* light blue */
+            color: #ffff00;              /* yellow */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 100, 200, 0.2); /* semi-transparent deep blue */
+            backdrop-filter: blur(3px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border: 2px solid #ffff00;  /* yellow border */
+        }
+
+        /* Photo styling – circular, with a yellow border */
+        .brother-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffff00;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #ffff00;
+        }
+
+        #quote {
+            font-size: 1.8rem;
+            line-height: 1.5;
+            min-height: 150px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #ffff00;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        button {
+            background-color: #ffff00;   /* yellow button */
+            color: #00008b;              /* dark blue text */
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 5px 0 #cccc00;
+        }
+
+        button:hover {
+            background-color: #ffd700;   /* gold on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 0 #b8860b;
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 0 #b8860b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ========================================= -->
+        <!-- REPLACE THE SRC URL WITH YOUR BROTHER'S PHOTO -->
+        <!-- ========================================= -->
+        <img 
+            class="brother-photo" 
+            src="https://via.placeholder.com/150/00008b/ffff00?text=BRO" 
+            alt="My brother"
+        >
+        <h1>✨ Quotes for You ✨</h1>
+        <div id="quote">Click the button to get a new quote.</div>
+        <button onclick="generateQuote()">Show New Quote</button>
+    </div>
+
+    <script>
+        // A special collection of quotes – faith, creativity, and brotherhood
+        const quotes = [
+            "For God so loved the world that he gave his one and only Son. – John 3:16",
+            "Your talent is God's gift to you. What you do with it is your gift back to God. – Leo Buscaglia",
+            "The best camera is the one you have with you. – Chase Jarvis",
+            "Let your light shine before others. – Matthew 5:16",
+            "Shoot for the stars, but keep your feet on the ground. – Unknown",
+            "I can do all things through Christ who strengthens me. – Philippians 4:13",
+            "Every video is a story waiting to be told. – Anonymous",
+            "Be strong and courageous. Do not be afraid. – Joshua 1:9",
+            "Creativity is intelligence having fun. – Albert Einstein",
+            "Trust in the Lord with all your heart. – Proverbs 3:5",
+            "A brother is a friend given by nature. – Unknown",
+            "With God, all things are possible. – Matthew 19:26",
+            "Lighting is everything – in film and in faith. – Anonymous",
+            "We love because he first loved us. – 1 John 4:19",
+            "The Lord is my shepherd; I shall not want. – Psalm 23:1"
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
